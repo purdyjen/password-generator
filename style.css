@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#genBtn {
+    margin: 10px;
+}
+#newPw {
+    background-color: antiquewhite;
+    border: 3px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.card {
+    margin: auto;
+    vertical-align: middle;
+}
