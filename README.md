@@ -1,5 +1,7 @@
 # password-generator
 
+URL: https://purdyjen.github.io/password-generator/
+
 This is a password generator tool with the following customization options:
  - Length of password
  - Options to include uppercase letters, lowercase letters, numbers, and symbols
