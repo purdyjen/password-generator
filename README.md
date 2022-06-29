@@ -14,9 +14,11 @@ Longer passwords are more secure. Many sites restrict passwords to be between 8 
 
 4. Choose a solution/Take action
 
-- An array of possible letters, numbers, and symbols
+- Create string of possible letters, numbers, and symbols
+- Split string into an array
 - Use random number function to generate index numbers in a for loop (16 times)
 - Use += to append new character
+- Return generated password
 
 5. Hit singles/Coding
 
