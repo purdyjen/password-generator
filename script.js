@@ -14,7 +14,9 @@ const includeOptionEl = document.getElementById("includeOption");
 const includeSymbolsEl = document.getElementById("includeSymbols");
 const incSymb = document.getElementById("incSymb");
 const omitSymb = document.getElementById("omitSymb");
-// If option to include symbols is checked, display option to specify which symbols to omit
+
+// If option to include symbols is checked, display options to either include or omit specific symbols
+// If the option to include symbols is unchecked, it resets all of the include/omit options
 symbolsEl.addEventListener("click", function handleClick() {
   if (symbolsEl.checked) {
     symbolRadiosEl.style.display = "block";
@@ -76,14 +78,14 @@ const filterSymbols = () => {
     // If the length of omitArr is not greater than 1 (i.e., an empty array), then no filter is necessary
     return symbolString;
   }
-};
+}
 
 // Function to generate a random number between two numbers with min being inclusive and max being exclusive
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-};
+}
 
 const buildArray = () => {
   // Grab the checked values for customization options
@@ -127,7 +129,7 @@ const buildArray = () => {
   const charArr = charStr.split("");
   // Return final character array that will be used by the generatePassword function
   return charArr;
-};
+}
 
 const generatePassword = () => {
   // Grab the desired length of password (either user-specified or the default value of 20)
@@ -146,7 +148,7 @@ const generatePassword = () => {
     generatedPassword += newChar;
   }
   return (newPw.innerText = generatedPassword);
-};
+}
 
 // Calls generatePassword() on click
 genBtn.addEventListener("click", () => {
@@ -162,6 +164,6 @@ function copyToClipboard() {
   navigator.clipboard.writeText(copyText);
 }
 
-copyPw.addEventListener("click", (e) => {
+copyPw.addEventListener("click", () => {
   copyToClipboard();
 });
