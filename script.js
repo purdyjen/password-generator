@@ -145,18 +145,19 @@ const generatePassword = () => {
     let newChar = arr[index];
     generatedPassword += newChar;
   }
-  return (newPw.innerHTML = generatedPassword);
+  console.log(generatedPassword);
+  return (newPw.textContent = generatedPassword);
 };
 
 // Calls generatePassword() on click
-genBtn.addEventListener("click", (e) => {
+genBtn.addEventListener("click", () => {
   generatePassword();
 });
 
 // Copies the password to clipboard
 function copyToClipboard() {
   /* Get the text field */
-  var copyText = newPw.innerHTML;
+  var copyText = newPw.textContent;
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText);
