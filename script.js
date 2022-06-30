@@ -30,8 +30,8 @@ const filterSymbols = () => {
   // Split omitSymbols string into array omitArr
   const omitArr = omitSymbols.split("");
 
-  // If the length of omitArr is greater than 1 (i.e., not an empty array), run this code
-  if (omitArr.length > 1) {
+  // If the length of omitArr is greater than 0 (i.e., not an empty array), run this code
+  if (omitArr.length > 0) {
     // compare omitArr[i] with symbolArr[k]
     // Because this is filtering out unwanted symbols, it is necessary for symbolArr to be the inner loop as its value will be changed every time a match is found
     for (let i = 0; i < omitArr.length; i++) {
