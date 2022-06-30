@@ -19,8 +19,7 @@
       <div class="card align-middle text-center my-auto" style="width: 18rem">
         <div class="card-body text-center">
           <h5 class="card-title">Password Generator</h5>
-          <p class="card-text" id="newPw">
-          </p>
+          <p class="card-text" id="newPw"></p>
           <div class="settings">
             <div class="settings">
               <label>Password Length</label>
@@ -42,9 +41,27 @@
               <label>Include Symbols</label>
               <input type="checkbox" id="symbols" checked />
             </div>
-            <div class="settings" id="omitOption">
-              <label>Omit these symbols:</label>
-              <input type="text" id="omitSymbols" />
+            <div class="settings" id="symbolRadios">
+              <input
+                type="radio"
+                id="incSymb"
+                name="symbolOptions"
+                value="include"
+              />
+              <label for="include">Set Symbols to Include</label><br />
+              <div class="settings" id="includeOption">
+                <input type="text" id="includeSymbols" />
+              </div>
+              <input
+                type="radio"
+                id="omitSymb"
+                name="symbolOptions"
+                value="omit"
+              />
+              <label for="omit">Set Symbols to Omit</label><br />
+              <div class="settings" id="omitOption">
+                <input type="text" id="omitSymbols" />
+              </div>
             </div>
           </div>
           <button class="btn btn-primary" id="genBtn">Generate Password</button>

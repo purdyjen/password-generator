@@ -31,6 +31,16 @@ body {
     text-align: left;
 }
 
+#symbolRadios {
+    margin-left: 20px;
+}
+
 #omitOption {
     margin-left: 20px;
+    display: none;
+}
+
+#includeOption {
+    margin-left: 20px;
+    display: none;
 }
