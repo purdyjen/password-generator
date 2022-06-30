@@ -145,7 +145,6 @@ const generatePassword = () => {
     let newChar = arr[index];
     generatedPassword += newChar;
   }
-  console.log(generatedPassword);
   return (newPw.textContent = generatedPassword);
 };
 
